@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3画五角星和六角星</title>
+    <style type="text/css">
+        #star{
+            width: 0px;
+            height: 0px;
+            margin: 100px auto;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            -webkit-transform: rotate(35deg);
+            -moz-transform: rotate(35deg);
+            -ms-transform: rotate(35deg);
+            -o-transform: rotate(35deg);
+            transform: rotate(35deg);
+            position: relative;
+        }
+        /*before层跟随element层旋转了*/
+        #star::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 80px solid pink;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            -webkit-transform: rotate(-35deg);
+            -moz-transform: rotate(-35deg);
+            -ms-transform: rotate(-35deg);
+            -o-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+            position: absolute;
+            top: -45px;
+            left: -62px; /*-65px*/
+        }
+        #star::after{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 70px solid lightblue;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            -webkit-transform: rotate(-70deg);
+            -moz-transform: rotate(-70deg);
+            -ms-transform: rotate(-70deg);
+            -o-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+            position: absolute;
+            top: 4px;/*3px*/
+            left: -105px;/*-105px*/
+        }
+
+        .sixHorn{
+            width: 0px;
+            height: 0px;
+            margin: 100px auto;
+            border-bottom: 190px solid lightgreen;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            position: relative;
+        }
+        .sixHorn::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-top: 190px solid lightgray;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            position: absolute;
+            top: 68px;
+            left: -100px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="star" style="display: none;"></div>
+    <div class="sixHorn"></div>
+</body>
+</html>

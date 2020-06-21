@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3的颜色模式(2)-实例仿天猫商品展示效果</title>
+    <style type="text/css">
+        body{
+            background-color: #ddd;
+        }
+
+        #commodity-main{
+            margin: 30px auto;
+            width: 800px;
+            clear: both;
+        }
+
+        #commodity-main > ul > li{
+            background-color: #fff;
+            list-style: none;
+            width: 240px;
+            padding: 1px;
+            float: left;
+            margin: 4px;
+            border: 1px solid rgba(255, 0, 0, 0);
+            cursor: pointer;
+        }
+        #commodity-main > ul > li:hover{
+            border: 1px solid rgba(255, 0, 0, 1);
+        }
+        .commodity-img-box img:hover{
+            opacity: 0.8;
+        }
+
+        .commodity-img-box{
+            text-align: center;
+            margin-top: 9px;
+        }
+        .commodity-img-box img{
+            width: 220px;
+            height: 220px;
+            transition: all .5s;/*0.5s*/
+        }
+
+        .commodity-info{
+            margin: 10px;
+            color: #555;
+            height: 20px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-break: break-all;/*针对纯数字强制换行*/
+        }
+
+        .commodity-price{
+            margin: 10px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="commodity-main">
+        <ul>
+            <li>
+                <div class="commodity-img-box">
+                    <img src="./taobao_commodity_cover_img/01.jpg" alt="包邮女装韩版女式t恤女全休闲短袖学生时尚">
+                </div>
+                <div class="commodity-info">
+                    包邮女装韩版女式t恤女全休闲短袖学生时尚
+                </div>
+                <div class="commodity-price">
+                    ￥15.80
+                </div>
+            </li>
+            <li>
+                <div class="commodity-img-box">
+                    <img src="./taobao_commodity_cover_img/02.jpg" alt="洋气显气质撞色衬衫女装2020春季新款雪纺上">
+                </div>
+                <div class="commodity-info">
+                    洋气显气质撞色衬衫女装2020春季新款雪纺上
+                </div>
+                <div class="commodity-price">
+                    ￥139.00
+                </div>
+            </li>
+            <li>
+                <div class="commodity-img-box">
+                    <img src="./taobao_commodity_cover_img/03.jpg" alt="夏季新款2020女装t恤女短袖纯棉简约圆">
+                </div>
+                <div class="commodity-info">
+                    夏季新款2020女装t恤女短袖纯棉简约圆
+                </div>
+                <div class="commodity-price">
+                    ￥29.00
+                </div>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <div class="commodity-img-box">
+                    <img src="./taobao_commodity_cover_img/04.jpg" alt="2020夏款韩版女装小方领纯色收腰绑带连">
+                </div>
+                <div class="commodity-info">
+                    2020夏款韩版女装小方领纯色收腰绑带连
+                </div>
+                <div class="commodity-price">
+                    ￥129.00
+                </div>
+            </li>
+            <li>
+                <div class="commodity-img-box">
+                    <img src="./taobao_commodity_cover_img/05.jpg" alt="欧洲站2020夏装新款名媛法式甜美裙子女">
+                </div>
+                <div class="commodity-info">
+                    欧洲站2020夏装新款名媛法式甜美裙子女
+                </div>
+                <div class="commodity-price">
+                    ￥377.00
+                </div>
+            </li>
+            <li>
+                <div class="commodity-img-box">
+                    <img src="./taobao_commodity_cover_img/06.jpg" alt="套装女装2020夏新款两件套网红洋气时尚">
+                </div>
+                <div class="commodity-info">
+                    套装女装2020夏新款两件套网红洋气时尚
+                </div>
+                <div class="commodity-price">
+                    ￥156.42
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

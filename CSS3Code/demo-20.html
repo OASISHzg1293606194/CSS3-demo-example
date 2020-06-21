@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3动画中的@keyframes关键帧讲解</title>
+    <style type="text/css">
+        .rect {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            /*相对于浏览器页面进行定位*/
+            position: fixed;
+
+            /*单次执行2s钟，并且重复执行 infinite*/
+            /*animation: rect-move2 3s infinite;*/
+
+
+
+
+            /*animation-name: rect-move2;*/
+            /*animation-duration: 3s;*/
+            /*匀速*/
+            /*animation-timing-function: linear;*/
+            /*慢快慢*/
+            /*animation-timing-function: ease;*/
+            /*快慢快*/
+            /*animation-timing-function: ease-in-out;*/
+            /*慢快*/
+            /*animation-timing-function: ease-in;*/
+            /*快慢*/
+            /*animation-timing-function: ease-out;*/
+
+            /*延时执行*/
+            /*animation-delay: 1s;*/
+
+            /*循环次数*/
+            /*animation-iteration-count: 3;*/
+            /*animation-iteration-count: infinite;*/
+
+            /*动画方向*/
+            /*animation-direction: normal;*/
+            /*animation-direction: alternate;*/
+
+            animation: rect-move1 3s 3;
+        }
+
+        @keyframes rect-move1 {
+            /*起始帧*/
+            from {
+                left: 20%;
+            }
+
+            /*结束帧*/
+            to {
+                left: 80%;
+            }
+        }
+
+        @keyframes rect-move2 {
+            0% {
+                top: 0;
+                left: 20%;
+                background-color: pink;
+            }
+
+            25% {
+                top: 0;
+                left: 80%;
+                background-color: red;
+            }
+
+            50% {
+                top: 80%;
+                left: 80%;
+                background-color: blue;
+            }
+
+            75% {
+                top: 80%;
+                left: 20%;
+                background-color: orange;
+            }
+
+            100% {
+                top: 0;
+                left: 20%;
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rect">
+        
+    </div>
+</body>
+</html>

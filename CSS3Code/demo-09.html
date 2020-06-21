@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3画太极阴阳图</title>
+    <style type="text/css">
+        body{
+            background-color: #C7C7C7;
+        }
+
+        #yinyang{
+            width: 150px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: white;
+            border-radius: 50%;
+            border-left: 150px solid black;
+            position: relative;
+        }
+
+        #yinyang::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            padding: 25px;
+            border: 50px solid black;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: -75px;
+        }
+
+        #yinyang::after{
+            content: '';
+            width: 0px;
+            height: 0px;
+            padding: 25px;
+            border: 50px solid white;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            left: -75px;
+            /*top: 150px;*/
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="yinyang">
+    </div>
+</body>
+</html>

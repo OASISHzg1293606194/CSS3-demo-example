@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3的border-radius画圆形</title>
+	<style type="text/css">
+		/*caniuse网站查看兼容性 border-radius IE6、IE7、IE8浏览器不支持*/
+		.demo{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #ccc;
+			background-color: pink;
+			margin: 50px auto;
+			/*border-radius: 50%;*/
+			/*四个角分别定义更灵活 同一个角x轴和y轴都是一样的像素*/
+			/*border-top-left-radius: 100px;*/
+			/*border-top-right-radius: 100px;*/
+			/*border-bottom-left-radius: 100px;*/
+			/*border-bottom-right-radius: 100px;*/
+
+			/*x轴y轴*/
+			border-top-left-radius: 100px 50px;
+		}
+
+		/*半圆*/
+		.demo2{
+			width: 100px;
+			height: 200px;
+			border: 1px solid #ccc;
+			background-color: pink;
+			margin: 50px auto;
+			border-radius: 100px 0px 0px 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo2">
+	</div>
+</body>
+</html>

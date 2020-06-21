@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3线性渐变</title>
+    <style type="text/css">
+        .hazy{
+            width: 260px;
+            height: 200px;
+            margin: 100px auto;
+            border: 1px solid black;
+            /*background-image: linear-gradient(0deg,orange, green);*/
+            /*orange的前50%不进行渐变，从50%开始渐变到100%结束*/
+            /*background-image: linear-gradient(to top,orange 50%, green 100%);*/
+            /*不写百分号都是平均渐变*/
+            /*background-image: linear-gradient(to right,orange 30%, green 60%, pink 100%);*/
+            background-image: linear-gradient(to right,orange 100px, green 160px, pink 260px);
+            background-image: -webkit-linear-gradient(to right,orange 100px, green 160px, pink 260px);
+            background-image: -o-linear-gradient(to right,orange 100px, green 160px, pink 260px);
+        }
+    </style>
+</head>
+<body>
+    <div class="hazy"></div>
+</body>
+</html>

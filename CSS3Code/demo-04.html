@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3画三角形和对话效果</title>
+    <style type="text/css">
+        .dialog{
+            background-color: #407F43;
+            margin: 150px auto;
+            /*text-align: center;*/
+            width: 300px;
+            height: 35px;
+            line-height: 35px;
+            padding: 10px;
+            border-radius: 6px;
+            color: #fff;
+            position: relative;
+        }
+
+        .dialog::before{
+            content: '';
+            border-top: 10px solid transparent;
+            border-right: 10px solid #407F43;
+            border-bottom: 10px solid transparent;
+            border-left: 0px solid #407F43;
+            position: absolute;
+            left: -10px;
+            top: 9px;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="triangle"></div>
+    <div class="dialog">Hello World……</div>
+</body>
+</html>

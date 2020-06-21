@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3画五边形和六边形</title>
+    <style type="text/css">
+        /*failed*/
+        .fiveBeyond{
+            width: 0px;
+            height: 0px;
+            margin: 100px auto;
+            border-bottom: 40px solid lightblue;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            position: relative;
+        }
+
+        .fiveBeyond::before{
+            content: '';
+            width: 40px;
+            height: 0px;
+            border-top: 35px solid pink;
+            border-right: 30px solid transparent;
+            border-left: 30px solid transparent;
+            position: absolute;
+            top: 40px;
+            left: -50px;
+        }
+
+
+        /*success*/
+        .sixBeyond{
+            width: 100px;
+            height: 55px;
+            margin: 100px auto;
+            background-color: pink;
+            position: relative;
+        }
+        .sixBeyond::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-top: 25px solid lightblue;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            position: absolute;
+            top: 55px;
+        }
+        .sixBeyond::after{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-bottom: 25px solid lightblue;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            position: absolute;
+            top: -25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fiveBeyond"></div>
+    <div class="sixBeyond" style="display: none;"></div>
+</body>
+</html>

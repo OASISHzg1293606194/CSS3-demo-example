@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3画菱形和平行四边形</title>
+    <style type="text/css">
+        /*菱形只是正方形的旋转*/
+        .diamond{
+            width: 160px;
+            height: 160px;
+            background-color: pink;
+            margin: 100px auto;
+            /*一定要考虑transform的浏览器兼容性*/
+            /*deg正数是顺时针旋转(rotate)、负数则是逆时针 的角度*/
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        
+        /*平行四边形*/
+        .parallelogram{
+            width: 160px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            /*倾斜，歪斜(skew)，skew(x轴倾斜角度[左右边倾斜], y轴倾斜角度[上下边倾斜])*/
+            -webkit-transform: skew(20deg, 30deg);
+            -moz-transform: skew(20deg, 30deg);
+            -ms-transform: skew(20deg, 30deg);
+            -o-transform: skew(20deg, 30deg);
+            transform: skew(20deg, 30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="diamond"></div>
+    <div class="parallelogram"></div>
+</body>
+</html>

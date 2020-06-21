@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3伪元素</title>
+	<style type="text/css">
+		.demo{
+			border: 1px solid #ccc;
+			width: 300px;
+			margin: 50px auto;
+			padding: 10px;
+		}
+		.demo::first-letter{
+			font-size: 40px;
+			font-weight: bold;
+			float: left;
+		}
+		.demo::first-line{
+			color: #F66;
+		}
+
+		.themeContent {
+			border: 1px solid #ccc;
+			width: 300px;
+			margin: 10px auto;
+			padding: 10px;
+			text-align: center;
+		}
+		/*before和after中必须加content属性*/
+		/*不加内容可写空 content: '';*/
+		.themeContent::before {
+			content:url(./moon.jpg);
+			/*行内元素块级化*/
+			display: block;
+		}
+		.themeContent::after {
+			content:url(./panda.jpg);
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		这片子的名字叫《南方车站的聚会》说明车站的那段戏是整个故事的核心所在，也是导演刻意去营造的一个戏剧性的核心。但是其实你看完故事就会发现车站的戏并没有真正形成高潮，反而一个核心的地点是野鹅塘的一个追捕。
+	</div>
+
+	<div class="themeContent">
+		Wild Goose
+	</div>
+</body>
+</html>

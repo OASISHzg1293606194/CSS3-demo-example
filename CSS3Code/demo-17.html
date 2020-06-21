@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3制作缓慢变长的方形（transition特效）、CSS3过渡的timing-function属性详解</title>
+    <style type="text/css">
+        .layer {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            background-color: #00a4ff;
+            /*border: 1px solid black;*/
+            margin: 100px auto;
+            /*使用时需要加前缀*/
+            -webkit-transition-duration: 3s;
+            -o-transition-duration: 3s;
+            transition-duration: 3s;
+            /*默认为所有属性*/
+            transition-property: all;
+            /*指定了的属性就会有过渡时间*/
+            /*transition-property: height;*/
+
+            /*默认为0s*/
+            transition-delay: .2s;
+
+            /*默认 慢-快-慢*/
+            /*transition-timing-function: ease;*/
+            /*匀速*/
+            /*transition-timing-function: linear;*/
+            /*慢-快*/
+            /*transition-timing-function: ease-in;*/
+            /*快-慢*/
+            /*transition-timing-function: ease-out;*/
+
+            /*快-慢-快*/
+            /*transition-timing-function: ease-in-out;*/
+
+            /*直接开始到结束-没有过渡效果*/
+            /*transition-timing-function: step-start;*/
+            /*前3s无反应，3s一过立马到结束效果 秒数时间间隔为transition-duration时间*/
+            transition-timing-function: step-end;
+
+            /*简写*/
+            /*transition: all 3s .2s ease;*/
+        }
+
+        .layer:hover {
+            width: 300px;
+            /*height: 150px;*/
+            background-color: #003aff;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layer"></div>
+</body>
+</html>

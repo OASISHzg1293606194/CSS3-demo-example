@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello World</title>
+</head>
+<body>
+	<img src="./hazy.jpg"/>
+	<p><a href="">https://caniuse.com/</a></p>
+	<p>
+		<input type="text" placeholder="Please write something">
+		<input type="text" placeholder="Not available" disabled>
+		<!-- <input type="text" disabled="true"> -->
+	</p>
+	<p>这个网站会告诉你transition等属性怎么加前缀</p>
+	<style type="text/css">
+		body{ text-align: center; }
+
+		img{
+			height: 200px;
+			margin-top: 60px;
+			cursor: pointer;
+			border-radius: 50%;
+			transition: all 0.5s;
+			-o-transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+		}
+		img:hover{
+			transform: scale(1.1);// transform变形，scale缩放
+		}
+
+		/*动态伪类选择器*/
+		a:link{ color: #666; }
+		a:visited{ color: red; }
+		a:hover{ color: black; }
+		a:active{ color: blue; }
+
+		/*UI元素状态伪类选择器*/
+		input:enabled{ background-color: #1599a563; }
+		input:disabled{ background-color: #8aa515b3; }
+	</style>
+</body>
+</html>

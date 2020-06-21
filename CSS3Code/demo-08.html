@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3画心形和蛋形</title>
+    <style type="text/css">
+        /*心形画法一*/
+        #heart1{
+            width: 0px;
+            height: 0px;
+            margin: 100px auto;
+            border-top: 80px solid red;
+            border-right: 50px solid red;
+            border-bottom: 80px solid red;
+            border-left: 50px solid red;
+            border-radius: 100px 100px 0px 0px;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            position: relative;
+        }
+
+        #heart1::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-top: 80px solid red;
+            border-right: 50px solid red;
+            border-bottom: 80px solid red;
+            border-left: 50px solid red;
+            border-radius: 100px 100px 0px 0px;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+            position: absolute;
+            top: -50px;
+            left: -20px;
+        }
+
+
+        /*心形画法二：设置原点origin(按照哪一个点进行旋转)*/
+        /*transform-origin必须与transform一同使用*/
+        #heart2{
+            width: 100px;
+            height: 90px;
+            margin: 120px auto;
+            position: relative;
+            /*background-color: yellow;*/
+        }
+
+        #heart2::before{
+            content: '';
+            width: 50px;
+            height: 80px;
+            position: absolute;
+            background-color: red;
+            border-radius: 50px 40px 0px 0px;
+            -webkit-transform-origin: 0 100%;
+            -moz-transform-origin: 0 100%;
+            -ms-transform-origin: 0 100%;
+            -o-transform-origin:0 100%;
+            transform-origin: 0 100%;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            left: 50px;
+        }
+
+        #heart2::after{
+            content: '';
+            width: 50px;
+            height: 80px;
+            position: absolute;
+            background-color: red;
+            border-radius: 40px 50px 0px 0px;
+            -webkit-transform-origin: 100% 100%;
+            -moz-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            -o-transform-origin:100% 100%;
+            transform-origin: 100% 100%;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        /*画鸡蛋形*/
+        #egg{
+            width: 120px;
+            height: 190px;
+            margin: 140px auto;
+            background-color: #F9BD99;
+            /* x轴 / y轴 的角度，分别是 左上 右上 右下 左下角x轴y轴角度*/
+            /*百分比越大在数轴上的长度越长*/
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+    </style>
+</head>
+<body>
+    <div id="heart1"></div>
+    <div id="heart2"></div>
+    <div id="egg"></div>
+</body>
+</html>

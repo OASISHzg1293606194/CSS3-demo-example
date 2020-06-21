@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3盒子阴影效果box-shadow</title>
+    <style type="text/css">
+        body {
+            background-color: #e9e9e9;
+        }
+
+        .main-box {
+            margin: 100px 300px;
+        }
+
+        .layer {
+            width: 300px;
+            padding: 10px 20px 10px 10px;
+            border: 1px solid #BFBFBF;
+            background-color: white;
+            box-shadow: 2px 2px 20px #aaa;
+        }
+
+        .layer img {
+            width: 290px;
+            cursor: pointer;
+            transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+        }
+
+        .layer img:hover{
+            transform: scale(1.4);// transform变形，scale缩放
+            z-index: 999;
+        }
+
+        .rotate-right {
+            float: left;
+            -webkit-transform: rotate(7deg);
+            -ms-transform: rotate(7deg);
+            -o-transform: rotate(7deg);
+            transform: rotate(7deg);
+        }
+        .rotate-left {
+            float: left;
+            -webkit-transform: rotate(-8deg);
+            -ms-transform: rotate(-8deg);
+            -o-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <div class="layer rotate-right">
+            <img src="./gulf.png" title="菩萨蛮·山亭水榭秋方半-宋代：朱淑真">
+            <p>山亭水榭秋方半，凤帏寂寞无人伴。愁闷一番新，双蛾只旧颦。</p>
+        </div>
+        <div class="layer rotate-left">
+            <img src="./redtree.png" title="菩萨蛮·山亭水榭秋方半-宋代：朱淑真">
+            <p>起来临绣户，时有疏萤度。多谢月相怜，今宵不忍圆。</p>
+        </div>
+    </div>
+</body>
+</html>
